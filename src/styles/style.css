@@ -333,6 +333,10 @@ header #menu-icon {
     font-weight: bold;
 }
 
+.welcome-container .signature-container .signature-content .signature-text p {
+    text-align: justify;
+}
+
 .welcome-container .signature-container .signature-content .signature-text .signature-button-container {
     width: 100%; 
     display: flex;
