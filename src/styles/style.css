@@ -378,6 +378,99 @@ header #menu-icon {
 }
 
 
+/*our services*/
+.our-services-container {
+    width: 100%; 
+    height: auto;
+    min-height: 100vh; 
+    background-color: var(--second-card-gray);
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.our-services-container .our-services-title {
+    height: 30%; 
+    width: 100%; 
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.our-services-container .our-services-title h3 {
+    font-size: 1.3rem;
+    letter-spacing: 6px;
+    font-weight: 500;
+    color: var(--light-color);
+}
+
+.our-services-container .our-services-title h2 {
+    font-size: 3.5rem;
+    color: var(--strong-color); 
+}
+
+.our-services-container .our-services-title #our-services-divider {
+    width: 5%; 
+}
+
+.our-services-container .our-services-content {
+    width: 100%; 
+    height: 50%; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 120px; 
+    margin-top: 30px; 
+}
+
+.our-services-container .our-services-content .our-services-square {
+    display: flex;
+    width: 100%; 
+    height: 200px; 
+}
+
+.our-services-container .our-services-content .our-services-square .our-services-icon{
+    width: 15%; 
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+}
+
+.our-services-container .our-services-content .our-services-square .our-services-text{
+    width: 85%; 
+    height: 100%;
+    padding: 20px 40px 0 10px; 
+}
+
+.our-services-container .our-services-content .our-services-square .service-icon {
+    font-size: 3rem;
+    color: var(--strong-color); 
+    cursor: pointer;
+}
+
+.our-services-container .our-services-content .our-services-square .service-icon:hover {
+    color: var(--light-color); 
+}
+
+.our-services-container .our-services-content .our-services-square .our-services-text .service-title{
+    color: var(--light-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.our-services-container .our-services-content .our-services-square .our-services-text .service-title:hover { 
+    color: var(--strong-color); 
+}
+
+.our-services-container .our-services-content .our-services-square .our-services-text .service-description{
+    color: var(--light-color); 
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
 
 
 
@@ -476,9 +569,23 @@ header #menu-icon {
         margin: 0;
         max-width: 200px;
     }
+
+    /*our services*/
+    .our-services-container {
+        margin-top: 50px;
+    }
+
+    .our-services-container .our-services-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .our-services-container .our-services-content .our-services-square .service-icon { 
+        font-size: 2rem;
+    }
 }
 
 @media(max-width: 600px) {
+    /*highlights*/
     .highlights-container {
         padding: 0 1rem; 
     }
@@ -489,6 +596,15 @@ header #menu-icon {
 
     .highlights-container .highlights-content .content{ 
         padding: 2rem 4rem; 
+    }
+
+    /*our services*/
+    .our-services-container {
+        margin-top: 150px;
+    }
+
+    .our-services-container .our-services-content {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -522,6 +638,53 @@ header #menu-icon {
         flex-direction: column;
         gap: 1rem;
     }
+
+    .welcome-container .signature-container .attorney-container {
+        display: none;
+    }
+
+    /*our services*/
+    .our-services-container {
+        padding-bottom: 50px; 
+    }
+
+    .our-services-container .our-services-title {
+        text-align: center;
+    }
+
+    .our-services-container .our-services-title h2 {
+        font-size: 2.2rem;
+        margin-top: 0.5rem;
+        padding: 0 1rem;
+    }
+
+    .our-services-container .our-services-content { 
+        padding: 0 2rem;
+        height: auto;
+        gap: 1rem;
+    }
+
+    .our-services-container .our-services-content .our-services-square { 
+        flex-direction: column;
+        border: 1px solid blue;
+        width: 100%;
+        height: auto; 
+        padding: 10px;
+    }
+
+    .our-services-container .our-services-content .our-services-square .service-title {
+        text-align: center;
+    }
+
+    .our-services-container .our-services-content .our-services-square .our-services-icon {
+        width: 100%; 
+        height: auto;
+    }
+
+    .our-services-container .our-services-content .our-services-square .our-services-text {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media(max-width: 350px) {
@@ -544,6 +707,10 @@ header #menu-icon {
     }
 
     /*highlights container*/
+    .highlights-container {
+        padding: 0;
+    }
+
     .highlights-container .highlights-content .content .title{ 
         font-size: 1.2rem;
     }
@@ -554,6 +721,11 @@ header #menu-icon {
 
     .highlights-container .highlights-content .content .icon {
         font-size: 1.5rem;
+    }
+
+    /*our services*/
+    .our-services-container {
+        margin-top: 250px;
     }
 }
 
