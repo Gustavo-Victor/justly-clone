@@ -1,6 +1,9 @@
 /*root settings and variables*/
 :root{
     --main-gray: #272d3467;
+    --first-card-gray: #353e47; 
+    --second-card-gray: #323a43;
+    --third-card-gray: #2e353d; 
     --accent-color: #cdba6d;
     --strong-color: #c8b050; 
     --light-color: #fff;
@@ -175,13 +178,13 @@ header #menu-icon {
 }
 
 .home-container .presentation-container button {
-    min-width: 150px; 
+    width: 150px; 
     background-color: var(--accent-color);
-    height: 50px; 
+    min-height: 50px; 
     font-weight: 500;
     border: 2px solid var(--strong-color);
     font-size: 1rem;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .home-container .presentation-container button:hover {
@@ -190,10 +193,110 @@ header #menu-icon {
 }
 
 
+/*highlights container*/
+.highlights-container {
+    width: 100%; 
+    height: 300px; 
+    padding: 0 6.25rem; 
+    position: absolute;
+    top: 118vh;
+    /* border: 1px solid blue; 
+    position: relative; */
+}
+
+.highlights-container .highlights-content{
+    width: 100%;
+    height: auto; 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    /* position: absolute; */
+    /* top: -50px;
+    left: 0; 
+    margin: 0 100px;*/
+}
+
+.highlights-container .highlights-content .content{
+    display: flex; 
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem; 
+    color: var(--light-color); 
+    padding: 2rem 6rem; 
+}
+
+.highlights-container .highlights-content .content .icon{
+    color: var(--strong-color);
+    font-size: 3rem; 
+}
+
+.highlights-container .highlights-content .content#square-1{
+    background-color: var(--first-card-gray);
+}
+
+
+.highlights-container .highlights-content .content#square-2{
+    background-color: var(--second-card-gray);
+}
+
+.highlights-container .highlights-content .content#square-3{
+    background-color: var(--third-card-gray);
+}
+
+.highlights-container .highlights-content .content .title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--heading-font);
+    text-align: center;
+}
+
+.highlights-container .highlights-content .content .divider{
+    border: none; 
+    border-top: 3px solid var(--strong-color); 
+    border-radius: 20px;
+    margin: 10px 0; 
+    width: 45%; 
+ }
+ 
+ .highlights-container .highlights-content .content .description{
+     font-size: 1.2rem;
+     font-weight: 500;
+     text-align: center;
+     color: var(--light-color);
+}
+
+.highlights-container .highlights-content .content.different .title {
+    color: var(--strong-color); 
+}
+
+.highlights-container .highlights-content .content.different .divider {
+    border-top: 3px solid var(--light-color);
+}
+
+.highlights-container .highlights-content .content.different .icon {
+    color: var(--light-color); 
+}
+
+
+
+
 
 
 /*media queries*/
-@media(max-width: 768px) {
+@media(max-width: 1050px) {
+    /*home container and hero*/
+    .home-container .presentation-container {
+        width: 70%;
+    }
+
+    /*highlights container*/
+    .highlights-container .highlights-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 900px) {
     /*header*/
     header {
         padding: 0 2rem; 
@@ -240,6 +343,35 @@ header #menu-icon {
     }
 }
 
+@media(max-width: 600px) {
+    .highlights-container {
+        padding: 0 1rem; 
+    }
+
+    .highlights-container .highlights-content {
+        grid-template-columns: 1fr;
+    }
+
+    .highlights-container .highlights-content .content{ 
+        padding: 2rem 4rem; 
+    }
+}
+
+@media(max-width: 500px) {
+    /*modal and hero*/ 
+    .home-container .presentation-container {
+        gap: 2rem;
+    }
+
+    .home-container .presentation-container button {
+        margin-top: 0;
+    }
+
+    /*highlights container*/
+    .highlights-container {
+        top: 123vh;
+    }
+}
 
 @media(max-width: 350px) {
     /*modal and hero*/ 
@@ -249,6 +381,19 @@ header #menu-icon {
 
     .home-container .presentation-container p {
         font-size: 1rem;
+    }
+
+    /*highlights container*/
+    .highlights-container .highlights-content .content .title{ 
+        font-size: 1.2rem;
+    }
+
+    .highlights-container .highlights-content .content .description {
+        font-size: 1rem;
+    }
+
+    .highlights-container .highlights-content .content .icon {
+        font-size: 1.5rem;
     }
 }
 
