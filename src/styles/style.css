@@ -1074,14 +1074,14 @@ footer .footer-content .theme-posts .post .post-content .post-date span {
 
     /*welcome container*/
     .welcome-container {
-        border: 1px solid blue; 
+        /* border: 1px solid blue;  */
         height: auto;
     }
 
     .welcome-container .signature-container .signature-content .signature-text{
         height: auto;
         margin-top: 100px;
-        border: 1px solid green; 
+        /* border: 1px solid green;  */
         width: 100%; 
         padding: 0 2rem; 
     }
