@@ -600,7 +600,7 @@ header #menu-icon {
 .form-container .form-content {
     background-color: var(--second-card-gray);
     width: 50%; 
-    height: 100%;
+    min-height: 100%;
     padding: 120px 60px 60px 60px;
     display: flex;
     flex-direction: column;
@@ -701,12 +701,182 @@ header #menu-icon {
 }
 
 
+/*footer*/
+footer {
+    width: 100%; 
+    min-height: 100vh;
+    height: auto;
+    background-color: var(--second-card-gray);
+    padding: 220px 140px 80px 140px; 
+}
+
+footer .footer-content {
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-content .about-text {
+    width: 40%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+}
+
+footer .footer-content .about-text h2 { 
+    color: var(--strong-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: 700;
+}
+
+footer .footer-content .about-text p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--light-color); 
+    line-height: 2;
+}
+
+footer .footer-content .about-text .social-media {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+footer .footer-content .about-text .social-media .social-link .social-icon{
+    font-size: 1.3rem;
+    color: var(--light-color); 
+}
+
+footer .footer-content .about-text .social-media .social-link #facebook-icon:hover {
+    color: #007bff;
+}
+
+footer .footer-content .about-text .social-media .social-link #telegram-icon:hover {
+    color: #17a2b8;
+}
+
+footer .footer-content .about-text .social-media .social-link #linkedin-icon:hover {
+    color: #007bff;
+}
+
+footer .footer-content .about-text .social-media .social-link #instagram-icon:hover {
+    color: #e83e8c;
+}
+
+footer .footer-content .about-text .social-media .social-link #youtube-icon:hover {
+    color: #dc3545;
+}
+
+footer .footer-content .theme-posts {
+    width: 40%; 
+    height: 100%;
+    display: flex;  
+    flex-direction: column;  
+}
+
+footer .footer-content .theme-posts h2 {
+    color: var(--strong-color); 
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 6px;
+    font-weight: 700;
+    margin-bottom: 40px; 
+}
+
+footer .footer-content .theme-posts .post {
+    width: 100%; 
+    height: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px; 
+}
+
+footer .footer-content .theme-posts .post .post-img {
+    width: 20%; 
+    height: auto;
+}
+
+footer .footer-content .theme-posts .post .post-content {
+    width: 80%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 80px; 
+}
+
+footer .footer-content .theme-posts .post .post-content p {
+    color: var(--light-color); 
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+footer .footer-content .theme-posts .post .post-content p:hover {
+    color: var(--strong-color);
+}
+
+footer .footer-content .theme-posts .post .post-content .post-date {
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    gap: 15px; 
+}
+
+footer .footer-content .theme-posts .post .post-content .post-date .clock-icon { 
+    color: var(--strong-color); 
+}
+
+footer .footer-content .theme-posts .post .post-content .post-date span {
+    color: var(--strong-color); 
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+
+/*copyright*/
+.copyright {
+    width: 100%; 
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.copyright span {
+    letter-spacing: 6px;
+    color: var(--third-card-gray); 
+    font-size: .9rem;
+}
+
+
 
 /*media queries*/
 @media(max-width: 1100px) {
     /*welcome container*/
     .welcome-container {
         margin-top: 150px;
+    }
+
+    /*footer*/
+    footer {
+        /* border: 1px solid red;  */
+        padding: 200px 4rem 5rem 4rem;
+    }
+
+    footer .footer-content {
+        gap: 2rem; 
+        justify-content: center;
+    }
+
+    footer .theme-posts {
+        width: auto; 
+        flex: 1;
+        /* border: 1px solid blue;  */
     }
 }
 
@@ -744,7 +914,7 @@ header #menu-icon {
         position: absolute; 
         top: 100px; 
         left: 0; 
-        background-color: #000;
+        background-color: var(--first-card-gray);
         width: 100%; 
         height: calc(100vh - 100px); 
     }
@@ -775,7 +945,7 @@ header #menu-icon {
     }
 
     .home-container .presentation-container h1 {
-        font-size: 3rem;
+        font-size: 2.6rem;
     }
 
     /*welcome container*/
@@ -813,7 +983,7 @@ header #menu-icon {
     }
 
     .our-services-container .our-services-content .our-services-square .service-icon { 
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     /*form*/
@@ -844,6 +1014,17 @@ header #menu-icon {
         width: 100%; 
         max-width: 500px; 
         height: auto;
+    }
+
+    /*footer*/
+    footer .footer-content {
+        flex-direction: column;
+        gap: 4rem; 
+    }
+
+    footer .footer-content .about-text, 
+    footer .footer-content .theme-posts {
+        width: 100%; 
     }
 }
 
@@ -892,10 +1073,17 @@ header #menu-icon {
     }
 
     /*welcome container*/
+    .welcome-container {
+        border: 1px solid blue; 
+        height: auto;
+    }
+
     .welcome-container .signature-container .signature-content .signature-text{
-        
         height: auto;
         margin-top: 100px;
+        border: 1px solid green; 
+        width: 100%; 
+        padding: 0 2rem; 
     }
 
     .welcome-container .signature-container .signature-content .signature-text .signature-title{
@@ -913,6 +1101,7 @@ header #menu-icon {
 
     /*our services*/
     .our-services-container {
+        margin-top: 0;
         padding-bottom: 50px; 
     }
 
@@ -983,6 +1172,36 @@ header #menu-icon {
         font-size: 2.2rem;
         margin: 1rem 0 0 0;
     }
+
+    /*footer*/
+    footer .footer-content .about-text p {
+        font-size: 1rem !important;
+    }
+
+    footer .footer-content .theme-posts .post {
+        /* border: 1px solid green;  */
+        flex-direction: column;
+        height: auto;
+        min-height: 100px;
+    }
+
+    footer .footer-content .theme-posts .post .post-img {
+        width: 100%; 
+        max-width: 150px; 
+    }
+
+    footer .footer-content .theme-posts .post .post-content {
+        padding: 0; 
+        gap: 15px; 
+    }
+
+    footer .footer-content .theme-posts .post .post-content p {
+        font-size: 1rem;
+    }
+
+    footer .footer-content .theme-posts .post .post-content .post-date span {
+        font-size: .8rem;
+    }
 }
 
 @media(max-width: 350px) {
@@ -992,12 +1211,13 @@ header #menu-icon {
     }
 
     header .logo .logo-text {
-        font-size: 1rem;
+        /* font-size: 1rem; */
+        display: none;
     }
 
     /*modal and hero*/ 
     .home-container .presentation-container h1 {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
 
     .home-container .presentation-container p {
@@ -1033,12 +1253,22 @@ header #menu-icon {
     }
 
     .testimonials-container .testimonials-cards-container .card .testimonials-text{ 
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     /*form*/
     .form-container .form-content .submit-button {
         width: 100% !important;
+    }
+
+    /*footer*/ 
+    footer {
+        padding: 200px 2rem 80px 2rem; 
+    }
+
+    footer .footer-content .theme-posts .post .post-img {
+        width: 100%; 
+        min-width: 100%;
     }
 }
 
